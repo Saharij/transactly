@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-sans
+}
+
+.main-button {
+    display: flex;
+    padding: 15px 25px;
+    width: max-content;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: box-shadow 600ms cubic-bezier(.33,.11,.02,.99),
+        transform 600ms cubic-bezier(.33,.11,.02,.99);
+}
+
+.main-button:hover {
+    transform: scale(1.025) translateY(-0.25rem);
+    box-shadow: 0 4px  4px  rgba(0, 0, 0, .1),
+        0 1px  6px  rgba(0, 0, 0, .05),
+        0 8px  8px  rgba(0, 0, 0, .1),
+        0 16px 16px rgba(0, 0, 0, .1),
+        8px 32px 32px rgba(0, 0, 0, .15),
+        8px 64px 64px rgba(0, 0, 0, .15);
+}

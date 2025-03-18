@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "export": "next export",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -12,19 +13,30 @@
     "ag-grid-community": "^33.1.1",
     "ag-grid-react": "^33.1.1",
     "chart.js": "^4.4.8",
+    "clsx": "^2.1.1",
+    "eslint-config-prettier": "^10.1.1",
+    "firebase": "^11.4.0",
     "next": "15.2.0",
+    "prettier": "^3.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.0.10",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.0",
-    "tailwindcss": "^4",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.10",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,css,md}": [
+      "prettier --check",
+      "eslint ."
+    ]
   }
 }
